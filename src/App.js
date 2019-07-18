@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 // import "./App.css";
 import ExpenseForm from "./components/ExpenseForm";
 import Editeur from "./components/Editeur";
-import Editeur2 from "./components/Editeur2";
 import Alert from "./components/Alert";
 import uuid from "uuid/v4";
 
