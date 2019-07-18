@@ -1,6 +1,7 @@
 import React from "react";
 import { MdSend } from "react-icons/md";
 import { ListGroup, Row, Col } from "react-bootstrap";
+// import ExpenseForm from "./components/ExpenseForm";
 
 const ExpenseForm = ({
 	charge,
@@ -68,9 +69,6 @@ const ExpenseForm = ({
 								<input
 									type="text"
 									className="form-control"
-									placeholder="Charge"
-									type="text"
-									className="form-control"
 									id="charge"
 									name="charge"
 									placeholder="e.g. rent"
@@ -80,9 +78,6 @@ const ExpenseForm = ({
 							</Col>
 							<Col>
 								<input
-									type="text"
-									className="form-control"
-									placeholder="Amount"
 									type="number"
 									className="form-control"
 									id="amount"
@@ -93,7 +88,17 @@ const ExpenseForm = ({
 								/>
 							</Col>
 							<Col>
-								<button className="btn btn-primary btn-block">Ajouter </button>
+								<button
+									className="btn btn-primary btn-block"
+									handleSubmit={handleSubmit}
+									charge={charge}
+									handleCharge={handleCharge}
+									amount={amount}
+									handleAmount={handleAmount}
+									edit={edit}
+								>
+									Add Here
+								</button>
 							</Col>
 							<Col />
 							<Col />
@@ -101,6 +106,14 @@ const ExpenseForm = ({
 					</ListGroup.Item>
 				</ListGroup>
 			</div>
+			{/* <ExpenseForm
+				handleSubmit={handleSubmit}
+				charge={charge}
+				handleCharge={handleCharge}
+				amount={amount}
+				handleAmount={handleAmount}
+				edit={edit}
+			/> */}
 		</div>
 	);
 };

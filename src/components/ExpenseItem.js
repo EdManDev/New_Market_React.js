@@ -10,7 +10,7 @@ const ExpenseItem = ({
 	return (
 		<div className="item">
 			<div>
-				<Table striped hover>
+				<Table striped bordered hover>
 					<tbody>
 						{/* next */}
 						<tr>

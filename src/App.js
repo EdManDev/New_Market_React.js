@@ -106,7 +106,7 @@ function App() {
   return (
     <>
       {alert.show && <Alert type={alert.type} text={alert.text} />}
-      <h1>budget calculator</h1>
+      <h1>Hello from APP</h1>
       <main className="App">
         <Editeur
           expenses={expenses}
@@ -122,7 +122,9 @@ function App() {
           handleAmount={handleAmount}
           edit={edit}
         />
-      <h1>
+      <div>
+        <h1>
+
         total spending :
         <span className="total">
           $
@@ -130,7 +132,8 @@ function App() {
             return (acc += curr.amount);
           }, 0)}
         </span>
-      </h1>
+        </h1>
+      </div>
       </main>
     </>
   );
