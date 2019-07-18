@@ -14,55 +14,7 @@ const ExpenseForm = ({
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
-				{/* 
-				<div className="form-center">
-					<div className="form-group">
-						<label htmlFor="expense">charge</label>
-						<input
-							type="text"
-							className="form-control"
-							id="charge"
-							name="charge"
-							placeholder="e.g. rent"
-							value={charge}
-							onChange={handleCharge}
-						/>
-					</div>
-					{/* <div className="#">
-					<label htmlFor="#">Quantites</label>
-					<input
-					// type="text"
-					// className="form-control"
-					// id="charge"
-					// name="charge"
-					// placeholder="e.g. rent"
-					// value={charge}
-					// onChange={handleCharge}
-					/>
-				</div> 
-					<div className="form-group">
-						<label htmlFor="amount">amount</label>
-						<input
-							type="number"
-							className="form-control"
-							id="amount"
-							name="amount"
-							placeholder="e.g. 100"
-							value={amount}
-							onChange={handleAmount}
-						/>
-					</div>
-				</div>
-					*/}
-
-				<button type="submit" className="btn">
-					{edit ? "edit" : "submit"}
-					{/* submit  */}
-					<MdSend className="btn-icon" />
-				</button>
-			</form>
-			<div>
-				<ListGroup>
+				<div>
 					<ListGroup.Item variant="primary">
 						<Row>
 							<Col variant="primary">
@@ -88,32 +40,18 @@ const ExpenseForm = ({
 								/>
 							</Col>
 							<Col>
-								<button
-									className="btn btn-primary btn-block"
-									handleSubmit={handleSubmit}
-									charge={charge}
-									handleCharge={handleCharge}
-									amount={amount}
-									handleAmount={handleAmount}
-									edit={edit}
-								>
-									Add Here
+								<button type="submit" className="btn btn-primary btn-block">
+									{edit ? "edit" : "Add Here"}
+									{/* submit  */}
+									<MdSend className="btn-icon" />
 								</button>
 							</Col>
 							<Col />
 							<Col />
 						</Row>
 					</ListGroup.Item>
-				</ListGroup>
-			</div>
-			{/* <ExpenseForm
-				handleSubmit={handleSubmit}
-				charge={charge}
-				handleCharge={handleCharge}
-				amount={amount}
-				handleAmount={handleAmount}
-				edit={edit}
-			/> */}
+				</div>
+			</form>
 		</div>
 	);
 };
