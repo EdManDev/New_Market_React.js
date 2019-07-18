@@ -1,5 +1,5 @@
 import React from "react";
-// import { MdEdit, MdDelete } from "react-icons/md";
+import { MdEdit, MdDelete } from "react-icons/md";
 import { Table } from "react-bootstrap";
 
 const ExpenseItem = ({
