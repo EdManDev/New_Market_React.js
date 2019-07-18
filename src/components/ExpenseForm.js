@@ -1,5 +1,4 @@
 import React from "react";
-import { MdSend } from "react-icons/md";
 import { ListGroup, Row, Col } from "react-bootstrap";
 // import ExpenseForm from "./components/ExpenseForm";
 
@@ -41,9 +40,8 @@ const ExpenseForm = ({
 							</Col>
 							<Col>
 								<button type="submit" className="btn btn-primary btn-block">
-									{edit ? "edit" : "Add Here"}
-									{/* submit  */}
-									<MdSend className="btn-icon" />
+									{edit ? "edit" : "Add Here  "}
+									<i class="fa fa-edit fa-lg" />
 								</button>
 							</Col>
 							<Col />

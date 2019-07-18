@@ -19,8 +19,12 @@ const ExpenseList = ({ expenses, handleDelete, handleEdit, clearItems }) => {
 			</div>
 			{expenses.length > 0 &&
 				<td>
-					<button className="btn btn-danger btn-block" onClick={clearItems}>
-						Clear All .
+					<button
+						className="btn btn-danger btn-block"
+						onClick={clearItems}
+						placeholder="e.g. 100"
+					>
+						Clear All !.
 						<i class="fa fa-trash-o fa-lg" />
 						{/* <MdDelete className="btn-icon" /> */}
 					</button>
