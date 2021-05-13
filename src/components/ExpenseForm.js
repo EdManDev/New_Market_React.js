@@ -1,6 +1,5 @@
 import React from "react";
 import { ListGroup, Row, Col } from "react-bootstrap";
-// import ExpenseForm from "./components/ExpenseForm";
 
 const ExpenseForm = ({
 	charge,
