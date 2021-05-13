@@ -1,3 +1,14 @@
+# New_Market
+
+## Screenshots
+
+|                                                         |                                                         |
+| :-----------------------------------------------------: | :-----------------------------------------------------: |
+| <img width="1604" alt=" -:-" src="./screenshots/0.jpg"> | <img width="1604" alt=" -:-" src="./screenshots/1.jpg"> |
+| <img width="1604" alt=" -:-" src="./screenshots/2.jpg"> | <img width="1604" alt=" -:-" src="./screenshots/3.jpg"> |
+| <img width="1604" alt=" -:-" src="./screenshots/4.jpg"> | <img width="1604" alt=" -:-" src="./screenshots/5.jpg"> |
+| <img width="1604" alt=" -:-" src="./screenshots/6.jpg"> | <img width="1604" alt=" -:-" src="./screenshots/7.jpg"> |
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

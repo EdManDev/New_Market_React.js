@@ -12,6 +12,7 @@ const ExpenseForm = ({
 }) => {
 	return (
 		<div>
+			<br />
 			<form onSubmit={handleSubmit}>
 				<div>
 					<ListGroup.Item variant="primary">
@@ -44,6 +45,7 @@ const ExpenseForm = ({
 									<i class="fa fa-edit fa-lg" />
 								</button>
 							</Col>
+
 							<Col />
 							<Col />
 						</Row>

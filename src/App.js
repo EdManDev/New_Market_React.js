@@ -5,17 +5,7 @@ import Editeur from "./components/Editeur";
 import Alert from "./components/Alert";
 import uuid from "uuid/v4";
 
-import { Table } from "react-bootstrap";
 
-// const initialExpenses = [
-//   { id: uuid(), charge: "rent", amount: 1600 },
-//   { id: uuid(), charge: "car payment", amount: 400 },
-//   {
-//     id: uuid(),
-//     charge: "credit card bill ",
-//     amount: 1200
-//   }
-// ];
 const initialExpenses = localStorage.getItem("expenses")
 	? JSON.parse(localStorage.getItem("expenses"))
 	: [];
@@ -88,16 +78,19 @@ function App() {
 			});
 		}
 	};
+
 	// handle delete
 	const handleDelete = id => {
 		let tempExpenses = expenses.filter(item => item.id !== id);
 		setExpenses(tempExpenses);
 		handleAlert({ type: "danger", text: "item deleted" });
 	};
+
 	//clear all items
 	const clearItems = () => {
 		setExpenses([]);
 	};
+
 	// handle edit
 	const handleEdit = id => {
 		let expense = expenses.find(item => item.id === id);
@@ -109,45 +102,49 @@ function App() {
 	};
 
 	return (
-		<div>
-			{alert.show && <Alert type={alert.type} text={alert.text} />}
-			<h1>Hello from APP</h1>
-			<main className="App">
-				<Editeur
-					expenses={expenses}
-					handleDelete={handleDelete}
-					clearItems={clearItems}
-					handleEdit={handleEdit}
-				/>
-				<div>
-					<Table striped bordered hover>
-						<tbody>
-							<tr>
-								<td />
-								<td />
-								<td>
-									total spending :
-									<span className="total">
-										$
-										{expenses.reduce((acc, curr) => {
-											return (acc += curr.amount);
-										}, 0)}
-									</span>
-								</td>
-							</tr>
-						</tbody>
-					</Table>
-				</div>
-				<ExpenseForm
-					handleSubmit={handleSubmit}
-					charge={charge}
-					handleCharge={handleCharge}
-					amount={amount}
-					handleAmount={handleAmount}
-					edit={edit}
-				/>
-			</main>
-		</div>
+		<section>
+			<div className="container">
+				{alert.show && <Alert type={alert.type} text={alert.text} />}
+
+				<div className="text-center"></div>
+				<h1>Hello from New Market</h1>
+				<main className="App">
+					<Editeur
+						expenses={expenses}
+						handleDelete={handleDelete}
+						clearItems={clearItems}
+						handleEdit={handleEdit}
+					/>
+					<div>
+						<table class="table table-bordered">
+							<tbody>
+								<tr>
+									<td colspan="2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+									<td>
+										<strong>
+											Total Spending : 			$
+										<span className="text-danger">
+												{expenses.reduce((acc, curr) => {
+													return (acc += curr.amount);
+												}, 0)}
+											</span>
+										</strong>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<ExpenseForm
+						handleSubmit={handleSubmit}
+						charge={charge}
+						handleCharge={handleCharge}
+						amount={amount}
+						handleAmount={handleAmount}
+						edit={edit}
+					/>
+				</main>
+			</div>
+		</section>
 	);
 }
 
