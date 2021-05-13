@@ -5,10 +5,11 @@ import Editeur from "./components/Editeur";
 import Alert from "./components/Alert";
 import uuid from "uuid/v4";
 
-
+// sent it to localStorage
 const initialExpenses = localStorage.getItem("expenses")
 	? JSON.parse(localStorage.getItem("expenses"))
 	: [];
+
 function App() {
 	// all expenses, add expense
 	const [expenses, setExpenses] = useState(initialExpenses);
@@ -52,6 +53,7 @@ function App() {
 			setAlert({ show: false });
 		}, 7000);
 	};
+
 	// handle submit
 	const handleSubmit = e => {
 		e.preventDefault();
